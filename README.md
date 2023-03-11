@@ -1,1 +1,1 @@
-# sanity-plugin-devto
+# sanity-plugin-devtoarticle
