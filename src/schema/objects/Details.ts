@@ -1,5 +1,5 @@
-import DetailsPreview from '@/components/DetailsPreview'
-import {ImageMetadata} from '@/schema/objects/Image'
+import DetailsPreview from '../../components/DetailsPreview'
+import {ImageMetadata} from '../objects/Image'
 import {TfiLayoutAccordionList} from 'react-icons/tfi'
 import {defineField, defineType} from 'sanity'
 

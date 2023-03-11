@@ -1,4 +1,4 @@
-import KatexInlinePreview from '@/components/KatexInlinePreview'
+import KatexInlinePreview from '../../components/KatexInlinePreview'
 import {TbMathFunction} from 'react-icons/tb'
 
 export const KatexInlineMetadata = {

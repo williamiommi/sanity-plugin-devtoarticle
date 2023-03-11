@@ -1,5 +1,4 @@
-import {KatexBlockMetadata} from '@/schema/objects/KatexBlock'
-import 'katex/dist/katex.min.css'
+import {KatexBlockMetadata} from '../schema/objects/KatexBlock'
 import {BlockMath} from 'react-katex'
 import {PreviewProps} from 'sanity'
 

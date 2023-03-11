@@ -1,4 +1,4 @@
-import {DetailsMetadata} from '@/schema/objects/Details'
+import {DetailsMetadata} from '../schema/objects/Details'
 import {PreviewProps} from 'sanity'
 
 const DetailsPreview = (props: PreviewProps) => {

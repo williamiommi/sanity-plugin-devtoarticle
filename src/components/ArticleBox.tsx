@@ -1,8 +1,8 @@
-import ArticleBadge from '@/components/ArticleBadge'
-import ArticleInfoDetail from '@/components/ArticleInfoDetail'
-import ArticleLinks from '@/components/ArticleLinks'
-import ArticleStats from '@/components/ArticleStats'
-import {IDevtoArticleResponse} from '@/types/IDevtoArticle'
+import ArticleBadge from './ArticleBadge'
+import ArticleInfoDetail from './ArticleInfoDetail'
+import ArticleLinks from './ArticleLinks'
+import ArticleStats from './ArticleStats'
+import {IDevtoArticleResponse} from '../types/IDevtoArticle'
 import {Avatar} from '@sanity/ui'
 
 interface ArticleBoxProps {
@@ -48,10 +48,6 @@ const ArticleBox = ({article}: ArticleBoxProps) => {
       <ArticleLinks published={article.published} url={article.url} />
     </div>
   )
-}
-
-ArticleBox.defaultProps = {
-  article: undefined,
 }
 
 export default ArticleBox

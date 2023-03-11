@@ -1,4 +1,4 @@
-import {DevtoArticleMetadata} from '@/schema/documents/DevtoArticle'
+import {DevtoArticleMetadata} from '../schema/documents/DevtoArticle'
 import {Dialog, KBD} from '@sanity/ui'
 import {useCallback, useState} from 'react'
 import {useFormValue} from 'sanity'

@@ -1,5 +1,4 @@
 import {Tooltip} from '@sanity/ui'
-import 'katex/dist/katex.min.css'
 import {ReactElement, useRef} from 'react'
 import {InlineMath} from 'react-katex'
 import {BlockDecoratorProps} from 'sanity'

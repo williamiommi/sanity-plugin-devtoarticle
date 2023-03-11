@@ -1,4 +1,4 @@
-import EmbedPreview from '@/components/EmbedPreview'
+import EmbedPreview from '../../components/EmbedPreview'
 import {BsGlobe} from 'react-icons/bs'
 import {defineField, defineType} from 'sanity'
 
