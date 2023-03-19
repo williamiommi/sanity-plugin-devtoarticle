@@ -10,7 +10,7 @@ export default defineConfig({
   rollup: {
     plugins: [
       postcss({
-        extract: path.resolve('./dist/bundle.min.css'),
+        extract: false,
         minimize: true,
         plugins: [require('tailwindcss'), require('autoprefixer')],
       }),

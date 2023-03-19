@@ -22,8 +22,7 @@
       "source": "./src/index.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.esm.js",
-      "default": "./dist/index.esm.js",
-      "./dist/bundle.min.css": "./dist/bundle.min.css"
+      "default": "./dist/index.esm.js"
     },
     "./package.json": "./package.json"
   },
