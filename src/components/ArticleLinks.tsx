@@ -28,9 +28,4 @@ const ArticleLinks = (props: ArticleLinksProps) => {
   )
 }
 
-ArticleLinks.defaultProps = {
-  url: '',
-  published: false,
-}
-
 export default ArticleLinks

@@ -12,8 +12,4 @@ const ArticleBadge = (props: ArticleBadgeProps) => {
   )
 }
 
-ArticleBadge.defaultProps = {
-  published: false,
-}
-
 export default ArticleBadge
