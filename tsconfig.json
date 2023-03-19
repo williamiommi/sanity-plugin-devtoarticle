@@ -5,9 +5,5 @@
     "rootDir": ".",
     "jsx": "react-jsx",
     "noEmit": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    }
   },
 }
