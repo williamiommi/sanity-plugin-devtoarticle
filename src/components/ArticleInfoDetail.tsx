@@ -1,7 +1,7 @@
-import {DevtoArticleMetadata} from '../schema/documents/DevtoArticle'
 import {Dialog, KBD} from '@sanity/ui'
 import {useCallback, useState} from 'react'
 import {useFormValue} from 'sanity'
+import DevtoArticleMetadata from '../schema/documents/DevtoArticle.metadata'
 
 interface ArticleInfoDetailProps {}
 

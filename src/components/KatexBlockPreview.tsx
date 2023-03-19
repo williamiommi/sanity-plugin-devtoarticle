@@ -1,6 +1,6 @@
-import {KatexBlockMetadata} from '../schema/objects/KatexBlock'
 import {BlockMath} from 'react-katex'
 import {PreviewProps} from 'sanity'
+import KatexBlockMetadata from '../schema/objects/KatexBlock.metadata'
 
 const KatexBlockPreview = (props: PreviewProps) => {
   return (

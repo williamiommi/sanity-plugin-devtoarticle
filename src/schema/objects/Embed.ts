@@ -1,12 +1,6 @@
 import EmbedPreview from '../../components/EmbedPreview'
-import {BsGlobe} from 'react-icons/bs'
 import {defineField, defineType} from 'sanity'
-
-export const EmbedMetadata = {
-  name: 'devto.embed',
-  title: 'Embed',
-  icon: BsGlobe,
-}
+import EmbedMetadata from './Embed.metadata'
 
 export default defineType({
   type: 'object',

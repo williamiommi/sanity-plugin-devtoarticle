@@ -1,5 +1,5 @@
-import {EmbedMetadata} from '../schema/objects/Embed'
 import {PreviewProps} from 'sanity'
+import EmbedMetadata from '../schema/objects/Embed.metadata'
 
 const EmbedPreview = (props: PreviewProps) => {
   const url = props.title as string

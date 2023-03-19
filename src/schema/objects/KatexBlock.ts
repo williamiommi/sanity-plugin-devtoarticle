@@ -1,12 +1,6 @@
-import {TbMathFunction} from 'react-icons/tb'
 import {defineField, defineType} from 'sanity'
 import KatexBlockPreview from '../../components/KatexBlockPreview'
-
-export const KatexBlockMetadata = {
-  name: 'devto.katexblock',
-  title: 'Katex Formula',
-  icon: TbMathFunction,
-}
+import KatexBlockMetadata from './KatexBlock.metadata'
 
 export default defineType({
   type: 'object',

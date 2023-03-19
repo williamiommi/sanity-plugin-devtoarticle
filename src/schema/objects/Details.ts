@@ -1,13 +1,7 @@
 import DetailsPreview from '../../components/DetailsPreview'
-import {ImageMetadata} from '../objects/Image'
-import {TfiLayoutAccordionList} from 'react-icons/tfi'
 import {defineField, defineType} from 'sanity'
-
-export const DetailsMetadata = {
-  name: 'devto.details',
-  title: 'Details',
-  icon: TfiLayoutAccordionList,
-}
+import DetailsMetadata from './Details.metadata'
+import ImageMetadata from './Image.metadata'
 
 export default defineType({
   type: 'object',

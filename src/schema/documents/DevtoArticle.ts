@@ -1,33 +1,12 @@
 import {DevtoArticleConfig} from '../../'
 import DevtoField from '../../components/DevtoField'
-import {DetailsMetadata} from '../objects/Details'
-import {EmbedMetadata} from '../objects/Embed'
-import {ImageMetadata} from '../objects/Image'
-import {KatexBlockMetadata} from '../objects/KatexBlock'
 import {KatexInlineMetadata} from '../objects/KatexInline'
-import {FaDev} from 'react-icons/fa'
 import {defineField, defineType} from 'sanity'
-
-export const DevtoArticleMetadata = {
-  name: 'devto.article',
-  title: 'Dev.to Article',
-  icon: FaDev,
-  fields: {
-    devto: {name: 'devto', title: 'Dev.to'},
-    devtoId: {name: 'id', title: 'Dev.to ID'},
-    devtoIsPublished: {name: 'isPublished', title: 'Is Published'},
-    devtoUpdatedAt: {name: 'updatedAt', title: 'Updated At'},
-    devtoSlug: {name: 'slug', title: 'Slug'},
-    title: {name: 'title', title: 'Title'},
-    description: {name: 'description', title: 'Description'},
-    cover_image: {name: 'cover_image', title: 'Cover Image'},
-    body_markdown: {name: 'body_markdown', title: 'Body'},
-    tags: {name: 'tags', title: 'Tags'},
-    series: {name: 'series', title: 'Series'},
-    canonical_url: {name: 'canonical_url', title: 'Canonical URL'},
-    organization_id: {name: 'organization_id', title: 'Organization ID'},
-  },
-}
+import ImageMetadata from '../objects/Image.metadata'
+import DetailsMetadata from '../objects/Details.metadata'
+import EmbedMetadata from '../objects/Embed.metadata'
+import KatexBlockMetadata from '../objects/KatexBlock.metadata'
+import DevtoArticleMetadata from './DevtoArticle.metadata'
 
 const DevtoArticle = (config: DevtoArticleConfig): any =>
   defineType({
