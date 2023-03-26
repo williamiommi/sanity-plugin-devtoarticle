@@ -3,5 +3,5 @@ export const katexInlineSerialiizer = (props: any): string => {
 }
 
 export const katexBlockSerialiizer = (props: any): string => {
-  return `{% katex %}\n${props.node.formula}\n{% endkatex %}`
+  return `{% katex %}\n${props.node.notation}\n{% endkatex %}`
 }

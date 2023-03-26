@@ -2,7 +2,7 @@ import {TbMathFunction} from 'react-icons/tb'
 
 const KatexBlockMetadata = {
   name: 'devto.katexblock',
-  title: 'Katex Formula',
+  title: 'Katex Notation',
   icon: TbMathFunction,
 }
 

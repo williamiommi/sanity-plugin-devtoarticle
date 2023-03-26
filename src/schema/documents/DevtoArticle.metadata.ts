@@ -2,7 +2,7 @@ import {FaDev} from 'react-icons/fa'
 
 const DevtoArticleMetadata = {
   name: 'devto.article',
-  title: 'Dev.to Article',
+  title: 'DEV Article',
   icon: FaDev,
   fields: {
     devto: {name: 'devto', title: 'Dev.to'},

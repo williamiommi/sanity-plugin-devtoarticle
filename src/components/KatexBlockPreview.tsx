@@ -7,7 +7,7 @@ const KatexBlockPreview = (props: PreviewProps) => {
     <>
       {props.renderDefault({
         ...props,
-        title: <p className="text-lg">Katex Formula</p>,
+        title: <p className="text-lg">Katex Notation</p>,
         media: KatexBlockMetadata.icon({size: 25}),
       })}
       <div className="text-center">

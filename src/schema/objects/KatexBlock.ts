@@ -6,7 +6,7 @@ export default defineType({
   type: 'object',
   ...KatexBlockMetadata,
   preview: {
-    select: {title: 'formula'},
+    select: {title: 'notation'},
     prepare: ({title}) => ({
       title,
     }),
@@ -17,8 +17,8 @@ export default defineType({
   fields: [
     defineField({
       type: 'string',
-      name: 'formula',
-      title: 'Formula',
+      name: 'notation',
+      title: 'Notation',
     }),
   ],
 })
