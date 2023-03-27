@@ -1,67 +1,47 @@
 import useNotification from '../hooks/useNotification'
 import {IDevtoArticleResponse} from '../types/IDevtoArticle'
-import apiErrorHandler from '../utils/apiErrorHandler'
-import {useCallback, useEffect, useState} from 'react'
 import {DevtoArticleConfig} from '..'
 import DevtoArticleMetadata from '../schema/documents/DevtoArticle.metadata'
+import {useQuery} from '@tanstack/react-query'
 
 interface useFetchArticleResponse {
   article?: IDevtoArticleResponse
   devtoIdValue: string
-  error: boolean
+  isError: boolean
+}
+
+const fetchArticle = async (url: string, articleId: string) => {
+  const res = await fetch(
+    `${url}?${new URLSearchParams({
+      articleId,
+    })}`
+  )
+  return res.json()
 }
 
 const useFetchArticle = (
   config: DevtoArticleConfig,
   value?: Record<string, unknown>
 ): useFetchArticleResponse => {
-  const notify = useNotification()
-  const [article, setArticle] = useState<IDevtoArticleResponse | undefined>()
-  const [error, setError] = useState(false)
   const {devtoId, devtoUpdatedAt} = DevtoArticleMetadata.fields
   const devtoIdValue = value ? (value[devtoId.name] as string) : ''
   const devtoUpdatedAtValue = value ? value[devtoUpdatedAt.name] : ''
+  const notify = useNotification()
+  const {data, isError, error} = useQuery({
+    enabled: !!devtoIdValue,
+    queryKey: [`devto.article${devtoUpdatedAtValue}`],
+    queryFn: () => fetchArticle(config.api.get, devtoIdValue),
+    refetchOnWindowFocus: false,
+  })
 
-  const fetchArticle = useCallback(
-    async (devtoID: string) => {
-      try {
-        if (!devtoID) return
-        const res = await fetch(
-          `${config.api.get}?${new URLSearchParams({
-            articleId: devtoID,
-          })}`
-        )
-        const json = await res.json()
-        if (!res.ok) {
-          throw new Error(json.error)
-        }
-        setArticle(json)
-        setError(false)
-      } catch (e) {
-        setError(true)
-        notify.error(apiErrorHandler(e))
-      }
-    },
-    [config.api.get, notify]
-  )
-
-  const unsetArticle = () => {
-    setArticle(undefined)
-    setError(false)
+  if (isError || data?.error) {
+    notify.error(error || data?.error || 'Something went wrong')
   }
 
-  useEffect(() => {
-    if (devtoUpdatedAtValue || devtoIdValue) {
-      fetchArticle(devtoIdValue)
-    } else {
-      unsetArticle()
-    }
-  }, [devtoIdValue, devtoUpdatedAtValue])
-
   return {
-    article,
+    article: data,
     devtoIdValue,
-    error,
+    isError: isError || data?.error,
   }
 }
 

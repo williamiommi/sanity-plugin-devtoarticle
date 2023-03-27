@@ -4,17 +4,18 @@ import ArticleError from '../components/ArticleError'
 import useFetchArticle from '../hooks/useFetchArticle'
 import {Spinner} from '@sanity/ui'
 import {ObjectFieldProps} from 'sanity'
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
 
 export interface DevtoFieldProps extends ObjectFieldProps {
   config: DevtoArticleConfig
 }
 
 const DevtoField = (props: DevtoFieldProps) => {
-  const {article, devtoIdValue, error} = useFetchArticle(props.config, props.value)
+  const {article, devtoIdValue, isError} = useFetchArticle(props.config, props.value)
 
   if (!devtoIdValue) return null
 
-  if (!error && !article) {
+  if (!isError && !article) {
     return (
       <div>
         <Spinner />
@@ -22,7 +23,7 @@ const DevtoField = (props: DevtoFieldProps) => {
     )
   }
 
-  if (error)
+  if (isError)
     return (
       <>
         <ArticleError id={devtoIdValue} />
@@ -32,4 +33,15 @@ const DevtoField = (props: DevtoFieldProps) => {
   return <ArticleBox article={article} />
 }
 
-export default DevtoField
+// Create a client
+const queryClient = new QueryClient()
+
+const DevtoFieldWrapper = (props: DevtoFieldProps) => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <DevtoField {...props} />
+    </QueryClientProvider>
+  )
+}
+
+export default DevtoFieldWrapper
