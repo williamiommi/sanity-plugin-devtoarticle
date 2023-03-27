@@ -96,23 +96,23 @@ const useDocumentActions = (
   )
 
   const createDraftArticle = useCallback(async () => {
-    await create(false, 'Draft created on Dev.to')
+    await create(false, 'Draft created on DEV')
   }, [create])
 
   const createAndPublishArticle = useCallback(async () => {
-    await create(true, 'Article published on Dev.to')
+    await create(true, 'Article published on DEV')
   }, [create])
 
   const updateArticle = useCallback(async () => {
-    await update(devtoIsPublishedValue, 'Article updated on Dev.to')
+    await update(devtoIsPublishedValue, 'Article updated on DEV')
   }, [update, devtoIsPublishedValue])
 
   const publishArticle = useCallback(async () => {
-    await update(true, 'Article published on Dev.to')
+    await update(true, 'Article published on DEV')
   }, [update])
 
   const unpublishArticle = useCallback(async () => {
-    await update(false, 'Article unpublished on Dev.to')
+    await update(false, 'Article unpublished on DEV')
   }, [update])
 
   const unlinkArticle = useCallback(() => {

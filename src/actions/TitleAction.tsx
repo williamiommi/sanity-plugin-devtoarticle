@@ -7,7 +7,7 @@ const TitleAction = (docProps: DocumentActionProps, config?: DevtoArticleConfig)
   const {sanityDocIsPublished} = useDocumentStatus(docProps)
   if (sanityDocIsPublished) {
     return {
-      label: 'Dev.to',
+      label: 'DEV',
       disabled: true,
       icon: FaDev,
     }

@@ -16,7 +16,7 @@ const UnpublishAction = (
     return {
       icon: UnpublishIcon,
       label: 'Unpublish',
-      title: 'Unpublish the document on Dev.to',
+      title: 'Unpublish the document on DEV',
       tone: 'critical',
       onHandle: () => {
         setDialogVisibility(true)
@@ -24,7 +24,7 @@ const UnpublishAction = (
       dialog: isDialogVisible && {
         type: 'confirm',
         tone: 'critical',
-        message: 'Are you sure you want to unpublish the article on Dev.to?',
+        message: 'Are you sure you want to unpublish the article on DEV?',
         onCancel: () => setDialogVisibility(false),
         onConfirm: () => {
           unpublishArticle()

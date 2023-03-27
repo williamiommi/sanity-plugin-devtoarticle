@@ -5,8 +5,8 @@ const DevtoArticleMetadata = {
   title: 'DEV Article',
   icon: FaDev,
   fields: {
-    devto: {name: 'devto', title: 'Dev.to'},
-    devtoId: {name: 'id', title: 'Dev.to ID'},
+    devto: {name: 'devto', title: 'DEV'},
+    devtoId: {name: 'id', title: 'DEV ID'},
     devtoIsPublished: {name: 'isPublished', title: 'Is Published'},
     devtoUpdatedAt: {name: 'updatedAt', title: 'Updated At'},
     devtoSlug: {name: 'slug', title: 'Slug'},

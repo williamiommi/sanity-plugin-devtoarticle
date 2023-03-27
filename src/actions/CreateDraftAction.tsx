@@ -11,7 +11,7 @@ const CreateDraftAction = (docProps: DocumentActionProps, config: DevtoArticleCo
     return {
       icon: PublishIcon,
       label: 'Create a Draft',
-      title: 'Create a draft version of the published document on Dev.to',
+      title: 'Create a draft version of the published document on DEV',
       tone: 'positive',
       onHandle: async () => {
         await createDraftArticle()

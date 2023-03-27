@@ -16,7 +16,7 @@ const UnlinkAction = (
     return {
       icon: LinkRemovedIcon,
       label: 'Unlink',
-      title: 'Unlink the document from Dev.to',
+      title: 'Unlink the document from DEV',
       tone: 'critical',
       onHandle: () => {
         setDialogVisibility(true)
@@ -25,7 +25,7 @@ const UnlinkAction = (
         type: 'confirm',
         tone: 'critical',
         message:
-          'Are you sure you want to unlink the document from Dev.to? This action is irreversible. The article will remain available on Dev.to.',
+          'Are you sure you want to unlink the document from DEV? This action is irreversible. The article will remain available on DEV.',
         onCancel: () => setDialogVisibility(false),
         onConfirm: () => {
           unlinkArticle()

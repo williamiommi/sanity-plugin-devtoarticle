@@ -16,7 +16,7 @@ const CreatePublishedAction = (
     return {
       icon: PublishIcon,
       label: 'Create and Publish',
-      title: 'Create and Publish the document on Dev.to',
+      title: 'Create and Publish the document on DEV',
       tone: 'positive',
       onHandle: () => {
         setDialogVisibility(true)
@@ -24,7 +24,7 @@ const CreatePublishedAction = (
       dialog: isDialogVisible && {
         type: 'confirm',
         tone: 'positive',
-        message: 'Are you ready to make it public on Dev.to?',
+        message: 'Are you ready to publish the article on DEV?',
         onCancel: () => setDialogVisibility(false),
         onConfirm: async () => {
           await createAndPublishArticle()

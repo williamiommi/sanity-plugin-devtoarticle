@@ -16,7 +16,7 @@ const ArticleInfoDetail = (props: ArticleInfoDetailProps) => {
       <KBD onClick={onOpen}>Show Info</KBD>
       {open && (
         <Dialog
-          header="Dev.to info fields"
+          header="DEV info fields"
           id="dialog-example"
           onClose={onClose}
           zOffset={1000}

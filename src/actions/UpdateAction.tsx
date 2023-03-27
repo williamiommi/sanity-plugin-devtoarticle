@@ -14,7 +14,7 @@ const UpdateAction = (
     return {
       icon: PublishIcon,
       label: 'Update',
-      title: 'Update the document on Dev.to',
+      title: 'Update the document on DEV',
       tone: 'positive',
       onHandle: async () => {
         await updateArticle()
