@@ -1,5 +1,6 @@
 import {LinkRemovedIcon} from '@sanity/icons'
 import {Card, KBD} from '@sanity/ui'
+import {FaDev} from 'react-icons/fa'
 
 interface ArticleErrorProps {
   id: string
@@ -7,7 +8,7 @@ interface ArticleErrorProps {
 
 const ArticleError = ({id}: ArticleErrorProps) => {
   return (
-    <Card tone="critical" padding={[4]}>
+    <Card tone="critical" padding={[4]} style={{position: 'relative'}}>
       <h2 className="text-lg font-bold">🚨 Something went wrong! 🚨</h2>
       <p className="mt-5">
         We couldn&apos;t find any article with id <span className="font-bold italic">{id}</span>
@@ -25,6 +26,9 @@ const ArticleError = ({id}: ArticleErrorProps) => {
         </KBD>
         &nbsp;the document.
       </p>
+      <span className="absolute top-1 right-1 text-7xl opacity-[0.04]">
+        <FaDev />
+      </span>
     </Card>
   )
 }
