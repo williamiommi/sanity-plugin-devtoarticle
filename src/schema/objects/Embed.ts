@@ -4,12 +4,15 @@ import EmbedMetadata from './Embed.metadata'
 
 export default defineType({
   type: 'object',
-  ...EmbedMetadata,
+  name: EmbedMetadata.name,
+  title: EmbedMetadata.title,
+  icon: EmbedMetadata.icon,
   preview: {
-    select: {title: 'url', showIframe: 'showIframe'},
-    prepare: ({title, showIframe}) => ({
+    select: {embedType: 'embedType', title: 'url', showPreview: 'showPreview'},
+    prepare: ({embedType, title, showPreview}) => ({
+      embedType,
       title,
-      showIframe,
+      showPreview,
     }),
   },
   components: {
@@ -17,14 +20,22 @@ export default defineType({
   },
   fields: [
     defineField({
+      type: 'string',
+      name: 'embedType',
+      title: 'Type',
+      options: {
+        list: EmbedMetadata.embedTypeList,
+      },
+    }),
+    defineField({
       type: 'url',
       name: 'url',
       title: 'Url',
     }),
     defineField({
       type: 'boolean',
-      name: 'showIframe',
-      title: 'Show In Iframe',
+      name: 'showPreview',
+      title: 'Show Preview',
     }),
   ],
 })
