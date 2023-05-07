@@ -1,15 +1,25 @@
 import {IconType} from 'react-icons'
 import {
-  BsFacebook,
-  BsGlobe,
-  BsInstagram,
-  BsLinkedin,
-  BsSpotify,
-  BsTwitter,
-  BsYoutube,
-} from 'react-icons/bs'
+  FaSoundcloud,
+  FaSpotify,
+  FaGlobe,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+  FaTwitch,
+} from 'react-icons/fa'
 
-export type EmbedType = 'youtube' | 'twitter' | 'linkedin' | 'instagram' | 'facebook' | 'spotify'
+export type EmbedType =
+  | 'youtube'
+  | 'twitter'
+  | 'linkedin'
+  | 'instagram'
+  | 'facebook'
+  | 'spotify'
+  | 'soundcloud'
+  | 'twitch'
 
 interface EmbedMetadataProps {
   name: 'devto.embed'
@@ -25,14 +35,16 @@ interface EmbedMetadataProps {
 const EmbedMetadata: EmbedMetadataProps = {
   name: 'devto.embed',
   title: 'Embed',
-  icon: BsGlobe,
+  icon: FaGlobe,
   embedTypeList: [
-    {value: 'youtube', title: 'Youtube', icon: BsYoutube},
-    {value: 'twitter', title: 'Twitter', icon: BsTwitter},
-    {value: 'linkedin', title: 'Linkedin', icon: BsLinkedin},
-    {value: 'instagram', title: 'Instagram', icon: BsInstagram},
-    {value: 'facebook', title: 'Facebook', icon: BsFacebook},
-    {value: 'spotify', title: 'Spotify', icon: BsSpotify},
+    {value: 'youtube', title: 'Youtube', icon: FaYoutube},
+    {value: 'twitter', title: 'Twitter', icon: FaTwitter},
+    {value: 'linkedin', title: 'Linkedin', icon: FaLinkedin},
+    {value: 'instagram', title: 'Instagram', icon: FaInstagram},
+    {value: 'facebook', title: 'Facebook', icon: FaFacebook},
+    {value: 'spotify', title: 'Spotify', icon: FaSpotify},
+    {value: 'soundcloud', title: 'SoundCloud', icon: FaSoundcloud},
+    {value: 'twitch', title: 'Twitch', icon: FaTwitch},
   ],
 }
 
