@@ -28,7 +28,11 @@ const EmbedPreview = (props: PreviewProps) => {
       Preview = <TwitterEmbed url={url} />
       break
     case 'youtube':
-      Preview = <YouTubeEmbed url={url} />
+      Preview = (
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+          <YouTubeEmbed url={url} width={'100%'} />
+        </div>
+      )
       break
     case 'instagram':
       Preview = <InstagramEmbed url={url} />
