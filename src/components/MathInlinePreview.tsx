@@ -11,7 +11,7 @@ const getNodeText: any = (node: ReactElement) => {
   return null
 }
 
-const KatexInlinePreview = (props: BlockDecoratorProps) => {
+const MathInlinePreview = (props: BlockDecoratorProps) => {
   const text = useRef(getNodeText(props.children))
   const TooltipContent = (
     <span className="inline-block p-2">
@@ -27,4 +27,4 @@ const KatexInlinePreview = (props: BlockDecoratorProps) => {
   )
 }
 
-export default KatexInlinePreview
+export default MathInlinePreview

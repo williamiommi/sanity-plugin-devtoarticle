@@ -1,11 +1,11 @@
 import {DevtoArticleConfig} from '../../'
 import DevtoField from '../../components/DevtoField'
-import {KatexInlineMetadata} from '../objects/KatexInline'
+import {MathInlineMetadata} from '../objects/MathInline'
 import {defineField, defineType} from 'sanity'
 import ImageMetadata from '../objects/Image.metadata'
 import DetailsMetadata from '../objects/Details.metadata'
 import EmbedMetadata from '../objects/Embed.metadata'
-import KatexBlockMetadata from '../objects/KatexBlock.metadata'
+import MathBlockMetadata from '../objects/MathBlock.metadata'
 import DevtoArticleMetadata from './DevtoArticle.metadata'
 
 const DevtoArticle = (config: DevtoArticleConfig): any =>
@@ -77,7 +77,7 @@ const DevtoArticle = (config: DevtoArticleConfig): any =>
                 {title: 'Code', value: 'code'},
                 {title: 'Underline', value: 'underline'},
                 {title: 'Strike', value: 'strike-through'},
-                {...KatexInlineMetadata},
+                {...MathInlineMetadata},
               ],
             },
           },
@@ -85,7 +85,7 @@ const DevtoArticle = (config: DevtoArticleConfig): any =>
           {type: 'code'},
           {type: DetailsMetadata.name},
           {type: EmbedMetadata.name},
-          {type: KatexBlockMetadata.name},
+          {type: MathBlockMetadata.name},
         ],
       }),
       defineField({

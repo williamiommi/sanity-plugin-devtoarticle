@@ -3,7 +3,7 @@ import {codeInput} from '@sanity/code-input'
 import Details from './schema/objects/Details'
 import Embed from './schema/objects/Embed'
 import Image from './schema/objects/Image'
-import KatexBlock from './schema/objects/KatexBlock'
+import MathBlock from './schema/objects/MathBlock'
 import {default as DevtoArticleDoc} from './schema/documents/DevtoArticle'
 import './global.css'
 import 'katex/dist/katex.min.css'
@@ -30,7 +30,7 @@ export const DevtoArticle = definePlugin<DevtoArticleConfig>((config) => {
     name: 'sanity-plugin-devtoarticle',
     plugins: [codeInput()],
     schema: {
-      types: [DevtoArticleDoc(config), Image, Details, Embed, KatexBlock],
+      types: [DevtoArticleDoc(config), Image, Details, Embed, MathBlock],
     },
     document: {
       actions: (prev, context) => {

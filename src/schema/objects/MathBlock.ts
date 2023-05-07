@@ -1,10 +1,10 @@
 import {defineField, defineType} from 'sanity'
-import KatexBlockPreview from '../../components/KatexBlockPreview'
-import KatexBlockMetadata from './KatexBlock.metadata'
+import MathBlockPreview from '../../components/MathBlockPreview'
+import MathBlockMetadata from './MathBlock.metadata'
 
 export default defineType({
   type: 'object',
-  ...KatexBlockMetadata,
+  ...MathBlockMetadata,
   preview: {
     select: {title: 'notation'},
     prepare: ({title}) => ({
@@ -12,7 +12,7 @@ export default defineType({
     }),
   },
   components: {
-    preview: KatexBlockPreview,
+    preview: MathBlockPreview,
   },
   fields: [
     defineField({
