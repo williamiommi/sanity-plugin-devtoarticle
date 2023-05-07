@@ -10,9 +10,11 @@ const KatexBlockPreview = (props: PreviewProps) => {
         title: <p className="text-lg">Katex Notation</p>,
         media: KatexBlockMetadata.icon({size: 25}),
       })}
-      <div className="text-center">
-        <BlockMath math={props.title as string} />
-      </div>
+      {props.title && (
+        <div className="text-center">
+          <BlockMath math={props.title as string} />
+        </div>
+      )}
     </>
   )
 }
