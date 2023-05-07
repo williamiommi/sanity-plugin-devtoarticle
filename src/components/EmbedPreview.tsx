@@ -1,6 +1,7 @@
 import {PreviewProps} from 'sanity'
 import EmbedMetadata, {EmbedType} from '../schema/objects/Embed.metadata'
 import {FacebookEmbed, InstagramEmbed, TwitterEmbed, YouTubeEmbed} from 'react-social-media-embed'
+import SpotifyPreview from './SpotifyPreview'
 
 const EmbedPreview = (props: PreviewProps) => {
   /** @ts-ignore */
@@ -34,6 +35,9 @@ const EmbedPreview = (props: PreviewProps) => {
       break
     case 'facebook':
       Preview = <FacebookEmbed url={url} />
+      break
+    case 'spotify':
+      Preview = <SpotifyPreview url={url} showPreview={showPreview} />
       break
     default:
       Preview = <iframe src={url} width="100%" height="400" />
